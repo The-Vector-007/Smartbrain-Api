@@ -31,6 +31,6 @@ app.get('/profile/:id',(req,res)=>{ profile.handleProfileGet(req,res,db) });
 app.put('/images',(req,res)=>{ image.handleImage(req,res,db) });
 app.post('/imageurl',(req,res)=>{ image.handleApiCall(req,res) });
 
-app.listen(3000,()=>{
-	console.log("Working on 3000");
+app.listen(process.env.PORT || 3000,()=>{
+	console.log(`Working on ${process.env.PORT}`);
 });
